@@ -22,6 +22,10 @@ WorldSection:NewButton("Scaffolding Read Info", "When You Press CTRL Invisible B
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Berkenens/Unknown-Scaffolding/main/Unknown-Scaffolding"))()
 end)
 
+WorldSection:NewButton("MineAura", "Break Multiple Blocks", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Berkenens/mineauranonautoThorfinn/main/mineauranonautoThorfinn"))()
+end)
+
 --Guis
 
 local Guis = Window:NewTab("Guis")
