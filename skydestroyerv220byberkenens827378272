@@ -1,0 +1,66 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Sky Destroyer By Thorfinn", "Ocean")
+
+local Player = Window:NewTab("Player")
+
+--World
+
+local World = Window:NewTab("World")
+
+local WorldSection = World:NewSection("World")
+
+WorldSection:NewButton("AutoFarmOres Read Info", "First Equip Pickaxe And Press This Button", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Berkenens/Unknown-Autofarm/main/Unknown-Autofarm"))()
+end)
+
+WorldSection:NewButton("AntiCheatBypass", "Deletes Kill Parts And AntiCheat You Can Tp Map", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Berkenens/Unknown-Anticheat/main/Unknown-Anticheat"))()
+end)
+
+WorldSection:NewButton("Scaffolding Read Info", "When You Press CTRL Invisible Block Spawn Under You (Infinite)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Berkenens/Unknown-Scaffolding/main/Unknown-Scaffolding"))()
+end)
+
+--Guis
+
+local Guis = Window:NewTab("Guis")
+
+local GuisSection = Guis:NewSection("Guis")
+
+GuisSection:NewButton("Infinite Yield", "Enables Infinite Yield", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+GuisSection:NewButton("SkyGui Read Info", "Teleports Etc", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/2dgeneralspam1/scripts-and-stuff/master/scripts/Loadstring9VHD6Wmyi82n", true))()
+end)
+
+--Player
+
+local PlayerSection = Player:NewSection("Player")
+
+PlayerSection:NewSlider("WalkSpeed", "Changes The WalkSpeed", 250, 16, function(v)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+end)
+
+PlayerSection:NewSlider("JumpPower", "Changes The JumpPower", 250, 50, function(v)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+end)
+
+PlayerSection:NewButton("Godmode Read The Info", "You Need To Buy Shield And Press When Round Starts", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Berkenens/Unknown-Godmode/main/Unknown-Godmode"))()
+end)
+
+PlayerSection:NewButton("AutoClicker", "Fast Sword Hit You Can Use Sword And Pickaxe", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Berkenens/Unknown-Auto/main/Unkknown-Auto"))()
+end)
+
+PlayerSection:NewButton("Infinite Jump", "Enables Infinite Jump", function()
+    local InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
+end)
